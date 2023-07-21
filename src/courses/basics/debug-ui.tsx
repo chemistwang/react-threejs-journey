@@ -78,6 +78,10 @@ function DebugUI() {
       controls.update();
     };
     tick();
+
+    return () => {
+      gui.destroy();
+    };
   }, []);
 
   return <canvas style={{ width: "100%", height: "100%" }} ref={ref} />;
