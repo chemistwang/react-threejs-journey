@@ -21,6 +21,7 @@ import Materials from "../courses/basics/materials";
 import Text3D from "../courses/basics/3d-text";
 import Lights from "../courses/classicTech/lights";
 import Shadows from "../courses/classicTech/shadows";
+import HauntedHouse from "../courses/classicTech/haunted-house";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -97,6 +98,11 @@ export const items: MenuItem[] = [
       {
         key: "shadows",
         label: "Shadows",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "haunted-house",
+        label: "Haunted House",
         icon: <AppstoreOutlined />,
       },
     ],
@@ -316,6 +322,10 @@ const router = createBrowserRouter([
       {
         path: "shadows",
         element: <Shadows />,
+      },
+      {
+        path: "haunted-house",
+        element: <HauntedHouse />,
       },
     ],
   },

@@ -1,15 +1,15 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import colorTextureImage from "./textures/door/color.jpg";
-import alphaTextureImage from "./textures/door/alpha.jpg";
-import heightTextureImage from "./textures/door/height.jpg";
-import normalTextureImage from "./textures/door/normal.jpg";
-import metalnessTextureImage from "./textures/door/metalness.jpg";
-import roughnessTextureImage from "./textures/door/roughness.jpg";
-import ambientOcclusionTextureImage from "./textures/door/ambientOcclusion.jpg";
-import checker1024Image from "./textures/checkerboard-1024x1024.png";
-import checker8Image from "./textures/checkerboard-8x8.png";
+import colorTextureImage from "../textures/door/color.jpg";
+import alphaTextureImage from "../textures/door/alpha.jpg";
+import heightTextureImage from "../textures/door/height.jpg";
+import normalTextureImage from "../textures/door/normal.jpg";
+import metalnessTextureImage from "../textures/door/metalness.jpg";
+import roughnessTextureImage from "../textures/door/roughness.jpg";
+import ambientOcclusionTextureImage from "../textures/door/ambientOcclusion.jpg";
+import checker1024Image from "../textures/checkerboard-1024x1024.png";
+import checker8Image from "../textures/checkerboard-8x8.png";
 
 function Textures() {
   const ref = useRef<HTMLCanvasElement>(null);

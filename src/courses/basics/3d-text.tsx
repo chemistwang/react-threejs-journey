@@ -4,7 +4,7 @@ import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 import typefaceFont from "three/examples/fonts/helvetiker_regular.typeface.json";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import matcapsImage from "./textures/matcaps/8.png";
+import matcapsImage from "../textures/matcaps/8.png";
 
 function Text3D() {
   const ref = useRef<HTMLCanvasElement>(null);
