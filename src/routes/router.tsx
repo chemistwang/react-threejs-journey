@@ -23,6 +23,7 @@ import Lights from "../courses/classicTech/lights";
 import Shadows from "../courses/classicTech/shadows";
 import HauntedHouse from "../courses/classicTech/haunted-house";
 import Particles from "../courses/classicTech/particles";
+import GalaxyGenerator from "../courses/classicTech/galaxy-generator";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -109,6 +110,11 @@ export const items: MenuItem[] = [
       {
         key: "particles",
         label: "Particles",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "galaxy-generator",
+        label: "Galaxy Generator",
         icon: <AppstoreOutlined />,
       },
     ],
@@ -336,6 +342,10 @@ const router = createBrowserRouter([
       {
         path: "particles",
         element: <Particles />,
+      },
+      {
+        path: "galaxy-generator",
+        element: <GalaxyGenerator />,
       },
     ],
   },
