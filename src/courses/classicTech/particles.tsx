@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import dat from "dat.gui";
-import particleImage from "../textures/particles/2.png";
+import particleImage from "../../static/textures/particles/2.png";
 
 function Particles() {
   const ref = useRef<HTMLCanvasElement>(null);

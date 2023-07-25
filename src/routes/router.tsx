@@ -24,6 +24,8 @@ import Shadows from "../courses/classicTech/shadows";
 import HauntedHouse from "../courses/classicTech/haunted-house";
 import Particles from "../courses/classicTech/particles";
 import GalaxyGenerator from "../courses/classicTech/galaxy-generator";
+import ScrollBasedAnimation from "../courses/classicTech/scroll-based-animation";
+import Physics from "../courses/advTech/physics";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -117,40 +119,45 @@ export const items: MenuItem[] = [
         label: "Galaxy Generator",
         icon: <AppstoreOutlined />,
       },
+      {
+        key: "scroll-based-animation",
+        label: "Scroll Based Animation",
+        icon: <AppstoreOutlined />,
+      },
     ],
   },
-  // {
-  //   key: "3",
-  //   label: "Advanced techniques",
-  //   icon: <AppstoreOutlined />,
-  //   children: [
-  //     {
-  //       key: "lights",
-  //       label: "Lights",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "transform-objects",
-  //       label: "Transform objects",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "animations",
-  //       label: "Animations",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "cameras",
-  //       label: "Cameras",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "fullscreen-resizing",
-  //       label: "Fullscreen and resizing",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //   ],
-  // },
+  {
+    key: "3",
+    label: "Advanced techniques",
+    icon: <AppstoreOutlined />,
+    children: [
+      {
+        key: "physics",
+        label: "Physics",
+        icon: <AppstoreOutlined />,
+      },
+      // {
+      //   key: "transform-objects",
+      //   label: "Transform objects",
+      //   icon: <AppstoreOutlined />,
+      // },
+      // {
+      //   key: "animations",
+      //   label: "Animations",
+      //   icon: <AppstoreOutlined />,
+      // },
+      // {
+      //   key: "cameras",
+      //   label: "Cameras",
+      //   icon: <AppstoreOutlined />,
+      // },
+      // {
+      //   key: "fullscreen-resizing",
+      //   label: "Fullscreen and resizing",
+      //   icon: <AppstoreOutlined />,
+      // },
+    ],
+  },
   // {
   //   key: "4",
   //   label: "Shaders",
@@ -346,6 +353,14 @@ const router = createBrowserRouter([
       {
         path: "galaxy-generator",
         element: <GalaxyGenerator />,
+      },
+      {
+        path: "scroll-based-animation",
+        element: <ScrollBasedAnimation />,
+      },
+      {
+        path: "physics",
+        element: <Physics />,
       },
     ],
   },

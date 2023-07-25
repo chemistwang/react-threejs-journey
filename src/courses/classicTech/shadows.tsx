@@ -2,8 +2,8 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import * as dat from "dat.gui";
-import bakedShadowImage from "../textures/bakedShadow.jpg";
-import simpleShadowImage from "../textures/simpleShadow.jpg";
+import bakedShadowImage from "../../static/textures/bakedShadow.jpg";
+import simpleShadowImage from "../../static/textures/simpleShadow.jpg";
 
 function Shadows() {
   const ref = useRef<HTMLCanvasElement>(null);

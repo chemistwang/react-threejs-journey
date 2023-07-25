@@ -1,24 +1,24 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import colorTextureImage from "../textures/door/color.jpg";
-import alphaTextureImage from "../textures/door/alpha.jpg";
-import heightTextureImage from "../textures/door/height.jpg";
-import normalTextureImage from "../textures/door/normal.jpg";
-import metalnessTextureImage from "../textures/door/metalness.jpg";
-import roughnessTextureImage from "../textures/door/roughness.jpg";
-import ambientOcclusionTextureImage from "../textures/door/ambientOcclusion.jpg";
-import checker1024Image from "../textures/checkerboard-1024x1024.png";
-import checker8Image from "../textures/checkerboard-8x8.png";
-import matcapTextureImage from "../textures/matcaps/1.png";
-import gradients3Image from "../textures/gradients/3.jpg";
+import colorTextureImage from "../../static/textures/door/color.jpg";
+import alphaTextureImage from "../../static/textures/door/alpha.jpg";
+import heightTextureImage from "../../static/textures/door/height.jpg";
+import normalTextureImage from "../../static/textures/door/normal.jpg";
+import metalnessTextureImage from "../../static/textures/door/metalness.jpg";
+import roughnessTextureImage from "../../static/textures/door/roughness.jpg";
+import ambientOcclusionTextureImage from "../../static/textures/door/ambientOcclusion.jpg";
+import checker1024Image from "../../static/textures/checkerboard-1024x1024.png";
+import checker8Image from "../../static/textures/checkerboard-8x8.png";
+import matcapTextureImage from "../../static/textures/matcaps/1.png";
+import gradients3Image from "../../static/textures/gradients/3.jpg";
 
-import EnvMapPX from "../textures/environmentMaps/0/px.jpg";
-import EnvMapNX from "../textures/environmentMaps/0/nx.jpg";
-import EnvMapPY from "../textures/environmentMaps/0/py.jpg";
-import EnvMapNY from "../textures/environmentMaps/0/ny.jpg";
-import EnvMapPZ from "../textures/environmentMaps/0/pz.jpg";
-import EnvMapNZ from "../textures/environmentMaps/0/nz.jpg";
+import EnvMapPX from "../../static/textures/environmentMaps/0/px.jpg";
+import EnvMapNX from "../../static/textures/environmentMaps/0/nx.jpg";
+import EnvMapPY from "../../static/textures/environmentMaps/0/py.jpg";
+import EnvMapNY from "../../static/textures/environmentMaps/0/ny.jpg";
+import EnvMapPZ from "../../static/textures/environmentMaps/0/pz.jpg";
+import EnvMapNZ from "../../static/textures/environmentMaps/0/nz.jpg";
 
 import * as dat from "dat.gui";
 

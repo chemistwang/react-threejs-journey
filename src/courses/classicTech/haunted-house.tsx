@@ -3,23 +3,23 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import * as dat from "dat.gui";
 
-import doorColorTextureImage from "../textures/door/color.jpg";
-import doorAlphaTextureImage from "../textures/door/alpha.jpg";
-import doorHeightTextureImage from "../textures/door/height.jpg";
-import doorNormalTextureImage from "../textures/door/normal.jpg";
-import doorMetalnessTextureImage from "../textures/door/metalness.jpg";
-import doorRoughnessTextureImage from "../textures/door/roughness.jpg";
-import doorAmbientOcclusionImage from "../textures/door/ambientOcclusion.jpg";
+import doorColorTextureImage from "../../static/textures/door/color.jpg";
+import doorAlphaTextureImage from "../../static/textures/door/alpha.jpg";
+import doorHeightTextureImage from "../../static/textures/door/height.jpg";
+import doorNormalTextureImage from "../../static/textures/door/normal.jpg";
+import doorMetalnessTextureImage from "../../static/textures/door/metalness.jpg";
+import doorRoughnessTextureImage from "../../static/textures/door/roughness.jpg";
+import doorAmbientOcclusionImage from "../../static/textures/door/ambientOcclusion.jpg";
 
-import bricksColorTextureImage from "../textures/bricks/color.jpg";
-import bricksNormalTextureImage from "../textures/bricks/normal.jpg";
-import bricksRoughnessTextureImage from "../textures/bricks/roughness.jpg";
-import bricksAmbientOcclusionImage from "../textures/bricks/ambientOcclusion.jpg";
+import bricksColorTextureImage from "../../static/textures/bricks/color.jpg";
+import bricksNormalTextureImage from "../../static/textures/bricks/normal.jpg";
+import bricksRoughnessTextureImage from "../../static/textures/bricks/roughness.jpg";
+import bricksAmbientOcclusionImage from "../../static/textures/bricks/ambientOcclusion.jpg";
 
-import grassColorTextureImage from "../textures/grass/color.jpg";
-import grassNormalTextureImage from "../textures/grass/normal.jpg";
-import grassRoughnessTextureImage from "../textures/grass/roughness.jpg";
-import grassAmbientOcclusionImage from "../textures/grass/ambientOcclusion.jpg";
+import grassColorTextureImage from "../../static/textures/grass/color.jpg";
+import grassNormalTextureImage from "../../static/textures/grass/normal.jpg";
+import grassRoughnessTextureImage from "../../static/textures/grass/roughness.jpg";
+import grassAmbientOcclusionImage from "../../static/textures/grass/ambientOcclusion.jpg";
 
 function HauntedHouse() {
   const ref = useRef<HTMLCanvasElement>(null);
