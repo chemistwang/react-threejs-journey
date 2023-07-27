@@ -24,7 +24,7 @@ import Shadows from "../courses/classicTech/shadows";
 import HauntedHouse from "../courses/classicTech/haunted-house";
 import Particles from "../courses/classicTech/particles";
 import GalaxyGenerator from "../courses/classicTech/galaxy-generator";
-import ScrollBasedAnimation from "../courses/classicTech/scroll-based-animation";
+// import ScrollBasedAnimation from "../courses/classicTech/scroll-based-animation";
 import Physics from "../courses/advTech/physics";
 
 type MenuItem = Required<MenuProps>["items"][number];
