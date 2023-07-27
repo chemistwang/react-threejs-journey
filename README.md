@@ -5,6 +5,7 @@
 - Ammo.js
 - Cannon.js
 - Oimo.js
+- physijs
 
 ## 2D physics libraries
 

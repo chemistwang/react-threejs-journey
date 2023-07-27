@@ -3384,6 +3384,11 @@
   "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001509.tgz"
   "version" "1.0.30001509"
 
+"cannon-es@^0.20.0":
+  "integrity" "sha512-eZhWTZIkFOnMAJOgfXJa9+b3kVlvG+FX4mdkpePev/w/rP5V8NRquGyEozcjPfEoXUlb+p7d9SUcmDSn14prOA=="
+  "resolved" "https://registry.npmjs.org/cannon-es/-/cannon-es-0.20.0.tgz"
+  "version" "0.20.0"
+
 "cannon@^0.6.2":
   "integrity" "sha512-n/7wWSXr8KOSvjad2x0fJHgpMepKjOKi+NdSnjfYyijoDBZnp4JQKgPcpv28jlXoWM+N9zVYU09J0A6Qxx+Y7w=="
   "resolved" "https://registry.npmjs.org/cannon/-/cannon-0.6.2.tgz"

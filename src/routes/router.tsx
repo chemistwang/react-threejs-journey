@@ -119,11 +119,11 @@ export const items: MenuItem[] = [
         label: "Galaxy Generator",
         icon: <AppstoreOutlined />,
       },
-      {
-        key: "scroll-based-animation",
-        label: "Scroll Based Animation",
-        icon: <AppstoreOutlined />,
-      },
+      // {
+      //   key: "scroll-based-animation",
+      //   label: "Scroll Based Animation",
+      //   icon: <AppstoreOutlined />,
+      // },
     ],
   },
   {
@@ -354,10 +354,10 @@ const router = createBrowserRouter([
         path: "galaxy-generator",
         element: <GalaxyGenerator />,
       },
-      {
-        path: "scroll-based-animation",
-        element: <ScrollBasedAnimation />,
-      },
+      // {
+      //   path: "scroll-based-animation",
+      //   element: <ScrollBasedAnimation />,
+      // },
       {
         path: "physics",
         element: <Physics />,
