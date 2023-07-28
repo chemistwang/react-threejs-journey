@@ -1,22 +1,24 @@
 # React Threejs Journey
 
-## 3D physics libraries
+## 1. Physics libraries
+
+### 1.1 3D physics libraries
 
 - Ammo.js
 - Cannon.js
 - Oimo.js
 - physijs
 
-## 2D physics libraries
+### 1.2 2D physics libraries
 
 - Matter.js
 - P2.js
 - Planck.js
 - Box2D.js
 
-## Models format
+## 2. Models format
 
-### Many 3D model formats, each one responding to a problem
+### 2.1 Many 3D model formats, each one responding to a problem
 
 - What data
 - Weight
@@ -25,7 +27,7 @@
 - Copyrights
 - Etc.
 
-### Different criteria
+### 2.2 Different criteria
 
 - Dedicated to one software
 - Very light but might lack specific data
@@ -36,7 +38,7 @@
 - ASCII
 - Etc.
 
-### Popular formats
+### 2.3 Popular formats
 
 - OBJ
 - FBX
@@ -46,7 +48,7 @@
 - 3DS
 - **GLTF**
 
-### GLTF formats
+### 2.4 GLTF formats
 
 A GLTF file can have different formats
 
@@ -55,7 +57,7 @@ A GLTF file can have different formats
 - glTF-Draco
 - glTF-Embedded
 
-### GLTF
+### 2.5 GLTF
 
 - The default format
 - Multiple files
@@ -65,7 +67,7 @@ A GLTF file can have different formats
 
 We load the `Duck.gltf` file and the other files should load automatically
 
-### GLTF-Binary
+### 2.6 GLTF-Binary
 
 - Only one file
 - Contains all the data we talked about
@@ -74,13 +76,29 @@ We load the `Duck.gltf` file and the other files should load automatically
 - Easier to load because only one file
 - Hard to alter its data
 
-### GLTF-Draco
+### 2.7 GLTF-Draco
 
 - Like the **glTF default** format, but the buffer data is compressed using the `Draco algorithm`
 - Much lighter
 
-### GLTF-Embedded
+### 2.8 GLTF-Embedded
 
 - One file like the `glTF-Binary` format
 - JSON
 - Heavier
+
+## 3. Rayster
+
+```ts
+const intersects = raycaster.intersectObjects([object1, object2, object3]);
+console.log(intersects);
+```
+
+Each item contains useful information
+
+- `distance` - distance between the origin of the ray and the collision point
+- `face` - what face of the geometry was hit by the ray
+- `faceIndex` - the index of that face
+- `object` - what object is concerned by the collision
+- `point` - a Vector3 of the exact position of the collision
+- `uv` - the UV coordinates in that geometry

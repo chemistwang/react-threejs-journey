@@ -27,6 +27,7 @@ import GalaxyGenerator from "../courses/classicTech/galaxy-generator";
 // import ScrollBasedAnimation from "../courses/classicTech/scroll-based-animation";
 import Physics from "../courses/advTech/physics";
 import ImportedModels from "../courses/advTech/imported-models";
+import RaycasterAndMouseEvents from "../courses/advTech/raycaster-and-mouse-events";
 // import AppDemo from "../demo/AppDemo";
 // import BloomDemo from "../demo/bloomDemo";
 // import MineDemo from "../demo/mineDemo";
@@ -145,21 +146,11 @@ export const items: MenuItem[] = [
         label: "Imported Models",
         icon: <AppstoreOutlined />,
       },
-      // {
-      //   key: "animations",
-      //   label: "Animations",
-      //   icon: <AppstoreOutlined />,
-      // },
-      // {
-      //   key: "cameras",
-      //   label: "Cameras",
-      //   icon: <AppstoreOutlined />,
-      // },
-      // {
-      //   key: "fullscreen-resizing",
-      //   label: "Fullscreen and resizing",
-      //   icon: <AppstoreOutlined />,
-      // },
+      {
+        key: "raycaster-and-mouse-events",
+        label: "Raycaster & Mouse events",
+        icon: <AppstoreOutlined />,
+      },
     ],
   },
   // {
@@ -391,6 +382,10 @@ const router = createBrowserRouter([
       {
         path: "imported-models",
         element: <ImportedModels />,
+      },
+      {
+        path: "raycaster-and-mouse-events",
+        element: <RaycasterAndMouseEvents />,
       },
       // {
       //   path: "app-demo",
