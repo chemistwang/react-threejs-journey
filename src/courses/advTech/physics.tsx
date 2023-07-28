@@ -355,6 +355,9 @@ function Physics() {
 
     return () => {
       gui.destroy();
+      for (const object of objectsToUpdate) {
+        object.body.removeEventListener("collide", playHitSound);
+      }
     };
   }, []);
 

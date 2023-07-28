@@ -26,6 +26,10 @@ import Particles from "../courses/classicTech/particles";
 import GalaxyGenerator from "../courses/classicTech/galaxy-generator";
 // import ScrollBasedAnimation from "../courses/classicTech/scroll-based-animation";
 import Physics from "../courses/advTech/physics";
+import ImportedModels from "../courses/advTech/imported-models";
+// import AppDemo from "../demo/AppDemo";
+// import BloomDemo from "../demo/bloomDemo";
+// import MineDemo from "../demo/mineDemo";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -136,11 +140,11 @@ export const items: MenuItem[] = [
         label: "Physics",
         icon: <AppstoreOutlined />,
       },
-      // {
-      //   key: "transform-objects",
-      //   label: "Transform objects",
-      //   icon: <AppstoreOutlined />,
-      // },
+      {
+        key: "imported-models",
+        label: "Imported Models",
+        icon: <AppstoreOutlined />,
+      },
       // {
       //   key: "animations",
       //   label: "Animations",
@@ -286,6 +290,28 @@ export const items: MenuItem[] = [
   //     },
   //   ],
   // },
+  {
+    key: "999",
+    label: "Demo",
+    icon: <AppstoreOutlined />,
+    children: [
+      {
+        key: "app-demo",
+        label: "App Demo",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "bloom-demo",
+        label: "Bloom Demo",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "mine-demo",
+        label: "Mine Demo",
+        icon: <AppstoreOutlined />,
+      },
+    ],
+  },
 ];
 
 const router = createBrowserRouter([
@@ -362,6 +388,22 @@ const router = createBrowserRouter([
         path: "physics",
         element: <Physics />,
       },
+      {
+        path: "imported-models",
+        element: <ImportedModels />,
+      },
+      // {
+      //   path: "app-demo",
+      //   element: <AppDemo />,
+      // },
+      // {
+      //   path: "bloom-demo",
+      //   element: <BloomDemo />,
+      // },
+      // {
+      //   path: "mine-demo",
+      //   element: <MineDemo />,
+      // },
     ],
   },
 ]);
