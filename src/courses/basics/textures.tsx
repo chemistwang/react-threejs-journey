@@ -1,15 +1,6 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import colorTextureImage from "../../static/textures/door/color.jpg";
-import alphaTextureImage from "../../static/textures/door/alpha.jpg";
-import heightTextureImage from "../../static/textures/door/height.jpg";
-import normalTextureImage from "../../static/textures/door/normal.jpg";
-import metalnessTextureImage from "../../static/textures/door/metalness.jpg";
-import roughnessTextureImage from "../../static/textures/door/roughness.jpg";
-import ambientOcclusionTextureImage from "../../static/textures/door/ambientOcclusion.jpg";
-import checker1024Image from "../../static/textures/checkerboard-1024x1024.png";
-import checker8Image from "../../static/textures/checkerboard-8x8.png";
 
 function Textures() {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -35,17 +26,34 @@ function Textures() {
       console.log("error...");
     };
     const textureLoader = new THREE.TextureLoader(loadingManager);
-    const colorTexture = textureLoader.load(colorTextureImage);
-    const alphaTexture = textureLoader.load(alphaTextureImage);
-    const heightTexture = textureLoader.load(heightTextureImage);
-    const normalTexture = textureLoader.load(normalTextureImage);
-    const metalnessTexture = textureLoader.load(metalnessTextureImage);
-    const roughnessTexture = textureLoader.load(roughnessTextureImage);
-    const ambientOcclusionTexture = textureLoader.load(
-      ambientOcclusionTextureImage
+
+    const colorTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/color.jpg`
     );
-    const checker1024ImageTexture = textureLoader.load(checker1024Image);
-    const checker8ImageTexture = textureLoader.load(checker8Image);
+    const alphaTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/alpha.jpg`
+    );
+    const heightTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/height.jpg`
+    );
+    const normalTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/normal.jpg`
+    );
+    const metalnessTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/metalness.jpg`
+    );
+    const roughnessTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/roughness.jpg`
+    );
+    const ambientOcclusionTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/ambientOcclusion.jpg`
+    );
+    const checker1024ImageTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/checkerboard-1024x1024.png`
+    );
+    const checker8ImageTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/checkerboard-1024x1024.png`
+    );
 
     colorTexture.repeat.x = 2;
     colorTexture.repeat.y = 3;

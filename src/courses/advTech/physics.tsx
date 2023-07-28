@@ -3,17 +3,8 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import dat from "dat.gui";
 
-import EnvMapPX from "../../static/textures/environmentMaps/0/px.jpg";
-import EnvMapNX from "../../static/textures/environmentMaps/0/nx.jpg";
-import EnvMapPY from "../../static/textures/environmentMaps/0/py.jpg";
-import EnvMapNY from "../../static/textures/environmentMaps/0/ny.jpg";
-import EnvMapPZ from "../../static/textures/environmentMaps/0/pz.jpg";
-import EnvMapNZ from "../../static/textures/environmentMaps/0/nz.jpg";
-
 // import CANNON from "cannon";
 import * as CANNON from "cannon-es";
-
-import hitSounds from "../../static/sounds/hit.mp3";
 
 function Physics() {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -30,7 +21,7 @@ function Physics() {
     /**
      * Sounds
      */
-    const hitSound = new Audio(hitSounds);
+    const hitSound = new Audio(`${process.env.PUBLIC_URL}/sounds/hit.mp3`);
     const playHitSound = (collision: any) => {
       const impactStrength = collision.contact.getImpactVelocityAlongNormal();
       // console.log(collision.contact.getImpactVelocityAlongNormal());
@@ -89,12 +80,12 @@ function Physics() {
     const cubeTextureLoader = new THREE.CubeTextureLoader();
 
     const environmentMapTexture = cubeTextureLoader.load([
-      EnvMapPX,
-      EnvMapNX,
-      EnvMapPY,
-      EnvMapNY,
-      EnvMapPZ,
-      EnvMapNZ,
+      `${process.env.PUBLIC_URL}/textures/environmentMaps/0/px.jpg`,
+      `${process.env.PUBLIC_URL}/textures/environmentMaps/0/nx.jpg`,
+      `${process.env.PUBLIC_URL}/textures/environmentMaps/0/py.jpg`,
+      `${process.env.PUBLIC_URL}/textures/environmentMaps/0/ny.jpg`,
+      `${process.env.PUBLIC_URL}/textures/environmentMaps/0/pz.jpg`,
+      `${process.env.PUBLIC_URL}/textures/environmentMaps/0/nz.jpg`,
     ]);
 
     /**

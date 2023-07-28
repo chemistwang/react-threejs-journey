@@ -5,9 +5,6 @@ import dat from "dat.gui";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 
-// import DuckGLTF from "../../static/models/Fox/glTF-Binary/Fox.glb";
-import FoxGLTF from "../../static/models/Fox/glTF-Binary/Fox.glb";
-
 function ImportedModels() {
   const ref = useRef<HTMLCanvasElement>(null);
 
@@ -37,7 +34,7 @@ function ImportedModels() {
     const gltfLoader = new GLTFLoader();
     let mixer: any = null;
     gltfLoader.load(
-      FoxGLTF,
+      `${process.env.PUBLIC_URL}/models/Fox/glTF-Binary/Fox.glb`,
       (gltf) => {
         mixer = new THREE.AnimationMixer(gltf.scene);
         const action = mixer.clipAction(gltf.animations[0]);

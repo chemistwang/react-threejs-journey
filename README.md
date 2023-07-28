@@ -102,3 +102,14 @@ Each item contains useful information
 - `object` - what object is concerned by the collision
 - `point` - a Vector3 of the exact position of the collision
 - `uv` - the UV coordinates in that geometry
+
+## 4. Model Software
+
+- C4D
+- Maya
+- 3DS Max
+- Blender
+- ZBrush
+- Marmoset Toolbag
+- Substance Painter
+- etc.

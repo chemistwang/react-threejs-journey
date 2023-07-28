@@ -3,24 +3,6 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import * as dat from "dat.gui";
 
-import doorColorTextureImage from "../../static/textures/door/color.jpg";
-import doorAlphaTextureImage from "../../static/textures/door/alpha.jpg";
-import doorHeightTextureImage from "../../static/textures/door/height.jpg";
-import doorNormalTextureImage from "../../static/textures/door/normal.jpg";
-import doorMetalnessTextureImage from "../../static/textures/door/metalness.jpg";
-import doorRoughnessTextureImage from "../../static/textures/door/roughness.jpg";
-import doorAmbientOcclusionImage from "../../static/textures/door/ambientOcclusion.jpg";
-
-import bricksColorTextureImage from "../../static/textures/bricks/color.jpg";
-import bricksNormalTextureImage from "../../static/textures/bricks/normal.jpg";
-import bricksRoughnessTextureImage from "../../static/textures/bricks/roughness.jpg";
-import bricksAmbientOcclusionImage from "../../static/textures/bricks/ambientOcclusion.jpg";
-
-import grassColorTextureImage from "../../static/textures/grass/color.jpg";
-import grassNormalTextureImage from "../../static/textures/grass/normal.jpg";
-import grassRoughnessTextureImage from "../../static/textures/grass/roughness.jpg";
-import grassAmbientOcclusionImage from "../../static/textures/grass/ambientOcclusion.jpg";
-
 function HauntedHouse() {
   const ref = useRef<HTMLCanvasElement>(null);
   THREE.ColorManagement.enabled = false;
@@ -51,32 +33,52 @@ function HauntedHouse() {
      * Textures
      */
     const textureLoader = new THREE.TextureLoader();
-    const doorColorTexture = textureLoader.load(doorColorTextureImage);
-    const doorAlphaTexture = textureLoader.load(doorAlphaTextureImage);
-    const doorAmbientOcclusionTexture = textureLoader.load(
-      doorAmbientOcclusionImage
+    const doorColorTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/color.jpg`
     );
-    const doorHeightTexture = textureLoader.load(doorHeightTextureImage);
-    const doorNormalTexture = textureLoader.load(doorNormalTextureImage);
-    const doorMetalnessTexture = textureLoader.load(doorMetalnessTextureImage);
-    const doorRoughnessTexture = textureLoader.load(doorRoughnessTextureImage);
+    const doorAlphaTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/alpha.jpg`
+    );
+    const doorAmbientOcclusionTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/ambientOcclusion.jpg`
+    );
+    const doorHeightTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/height.jpg`
+    );
+    const doorNormalTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/normal.jpg`
+    );
+    const doorMetalnessTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/metalness.jpg`
+    );
+    const doorRoughnessTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/roughness.jpg`
+    );
 
-    const bricksColorTexture = textureLoader.load(bricksColorTextureImage);
-    const bricksNormalTexture = textureLoader.load(bricksNormalTextureImage);
+    const bricksColorTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/bricks/color.jpg`
+    );
+    const bricksNormalTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/bricks/normal.jpg`
+    );
     const bricksRoughnessTexture = textureLoader.load(
-      bricksRoughnessTextureImage
+      `${process.env.PUBLIC_URL}/textures/bricks/roughness.jpg`
     );
     const bricksAmbientOcclusionTexture = textureLoader.load(
-      bricksAmbientOcclusionImage
+      `${process.env.PUBLIC_URL}/textures/bricks/ambientOcclusion.jpg`
     );
 
-    const grassColorTexture = textureLoader.load(grassColorTextureImage);
-    const grassNormalTexture = textureLoader.load(grassNormalTextureImage);
+    const grassColorTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/grass/color.jpg`
+    );
+    const grassNormalTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/grass/normal.jpg`
+    );
     const grassRoughnessTexture = textureLoader.load(
-      grassRoughnessTextureImage
+      `${process.env.PUBLIC_URL}/textures/grass/roughness.jpg`
     );
     const grassAmbientOcclusionTexture = textureLoader.load(
-      grassAmbientOcclusionImage
+      `${process.env.PUBLIC_URL}/textures/grass/ambientOcclusion.jpg`
     );
 
     grassColorTexture.repeat.set(8, 8);

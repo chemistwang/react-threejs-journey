@@ -4,7 +4,6 @@ import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 import typefaceFont from "three/examples/fonts/helvetiker_regular.typeface.json";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import matcapsImage from "../../static/textures/matcaps/8.png";
 
 function Text3D() {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -17,7 +16,9 @@ function Text3D() {
      * Textures
      */
     const textureLoader = new THREE.TextureLoader();
-    const matcapTexture = textureLoader.load(matcapsImage);
+    const matcapTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/matcaps/8.png`
+    );
 
     // Sizes
     const sizes = {

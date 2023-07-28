@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import dat from "dat.gui";
-import particleImage from "../../static/textures/particles/2.png";
 
 function Particles() {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -31,7 +30,9 @@ function Particles() {
      * Textures
      */
     const textureLoader = new THREE.TextureLoader();
-    const particleTexture = textureLoader.load(particleImage);
+    const particleTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/particles/2.png`
+    );
 
     /**
      * Particles

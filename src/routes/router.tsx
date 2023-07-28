@@ -28,6 +28,7 @@ import GalaxyGenerator from "../courses/classicTech/galaxy-generator";
 import Physics from "../courses/advTech/physics";
 import ImportedModels from "../courses/advTech/imported-models";
 import RaycasterAndMouseEvents from "../courses/advTech/raycaster-and-mouse-events";
+import RealisticRender from "../courses/advTech/realistic-render";
 // import AppDemo from "../demo/AppDemo";
 // import BloomDemo from "../demo/bloomDemo";
 // import MineDemo from "../demo/mineDemo";
@@ -149,6 +150,11 @@ export const items: MenuItem[] = [
       {
         key: "raycaster-and-mouse-events",
         label: "Raycaster & Mouse events",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "realistic-render",
+        label: "Realistic render",
         icon: <AppstoreOutlined />,
       },
     ],
@@ -386,6 +392,10 @@ const router = createBrowserRouter([
       {
         path: "raycaster-and-mouse-events",
         element: <RaycasterAndMouseEvents />,
+      },
+      {
+        path: "realistic-render",
+        element: <RealisticRender />,
       },
       // {
       //   path: "app-demo",

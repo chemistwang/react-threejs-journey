@@ -2,8 +2,6 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import * as dat from "dat.gui";
-import bakedShadowImage from "../../static/textures/bakedShadow.jpg";
-import simpleShadowImage from "../../static/textures/simpleShadow.jpg";
 
 function Shadows() {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -31,8 +29,13 @@ function Shadows() {
      * Textures
      */
     const textureLoader = new THREE.TextureLoader();
-    const bakedShadow = textureLoader.load(bakedShadowImage);
-    const simpleShadow = textureLoader.load(simpleShadowImage);
+
+    const bakedShadow = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/bakedShadow.jpg`
+    );
+    const simpleShadow = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/simpleShadow.jpg`
+    );
 
     /**
      * Lights

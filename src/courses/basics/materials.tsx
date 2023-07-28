@@ -1,25 +1,6 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import colorTextureImage from "../../static/textures/door/color.jpg";
-import alphaTextureImage from "../../static/textures/door/alpha.jpg";
-import heightTextureImage from "../../static/textures/door/height.jpg";
-import normalTextureImage from "../../static/textures/door/normal.jpg";
-import metalnessTextureImage from "../../static/textures/door/metalness.jpg";
-import roughnessTextureImage from "../../static/textures/door/roughness.jpg";
-import ambientOcclusionTextureImage from "../../static/textures/door/ambientOcclusion.jpg";
-import checker1024Image from "../../static/textures/checkerboard-1024x1024.png";
-import checker8Image from "../../static/textures/checkerboard-8x8.png";
-import matcapTextureImage from "../../static/textures/matcaps/1.png";
-import gradients3Image from "../../static/textures/gradients/3.jpg";
-
-import EnvMapPX from "../../static/textures/environmentMaps/0/px.jpg";
-import EnvMapNX from "../../static/textures/environmentMaps/0/nx.jpg";
-import EnvMapPY from "../../static/textures/environmentMaps/0/py.jpg";
-import EnvMapNY from "../../static/textures/environmentMaps/0/ny.jpg";
-import EnvMapPZ from "../../static/textures/environmentMaps/0/pz.jpg";
-import EnvMapNZ from "../../static/textures/environmentMaps/0/nz.jpg";
-
 import * as dat from "dat.gui";
 
 function Materials() {
@@ -32,31 +13,51 @@ function Materials() {
     const textureLoader = new THREE.TextureLoader();
     const cubeTextureLoader = new THREE.CubeTextureLoader();
 
-    const colorTexture = textureLoader.load(colorTextureImage);
-    const alphaTexture = textureLoader.load(alphaTextureImage);
-    const heightTexture = textureLoader.load(heightTextureImage);
-    const normalTexture = textureLoader.load(normalTextureImage);
-    const metalnessTexture = textureLoader.load(metalnessTextureImage);
-    const roughnessTexture = textureLoader.load(roughnessTextureImage);
-    const ambientOcclusionTexture = textureLoader.load(
-      ambientOcclusionTextureImage
+    const colorTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/color.jpg`
     );
-    const checker1024ImageTexture = textureLoader.load(checker1024Image);
-    const checker8ImageTexture = textureLoader.load(checker8Image);
+    const alphaTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/alpha.jpg`
+    );
+    const heightTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/height.jpg`
+    );
+    const normalTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/normal.jpg`
+    );
+    const metalnessTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/metalness.jpg`
+    );
+    const roughnessTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/roughness.jpg`
+    );
+    const ambientOcclusionTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/door/ambientOcclusion.jpg`
+    );
+    const checker1024ImageTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/checkerboard-1024x1024.png`
+    );
+    const checker8ImageTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/checkerboard-1024x1024.png`
+    );
 
-    const matcapTextureTexture = textureLoader.load(matcapTextureImage);
+    const matcapTextureTexture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/matcaps/1.png`
+    );
 
-    const gradients3Texture = textureLoader.load(gradients3Image);
+    const gradients3Texture = textureLoader.load(
+      `${process.env.PUBLIC_URL}/textures/gradients/3.jpg`
+    );
     gradients3Texture.minFilter = THREE.NearestFilter;
     gradients3Texture.magFilter = THREE.NearestFilter;
 
     const environmentMapTexture = cubeTextureLoader.load([
-      EnvMapPX,
-      EnvMapNX,
-      EnvMapPY,
-      EnvMapNY,
-      EnvMapPZ,
-      EnvMapNZ,
+      `${process.env.PUBLIC_URL}/textures/environmentMaps/0/px.jpg`,
+      `${process.env.PUBLIC_URL}/textures/environmentMaps/0/nx.jpg`,
+      `${process.env.PUBLIC_URL}/textures/environmentMaps/0/py.jpg`,
+      `${process.env.PUBLIC_URL}/textures/environmentMaps/0/ny.jpg`,
+      `${process.env.PUBLIC_URL}/textures/environmentMaps/0/pz.jpg`,
+      `${process.env.PUBLIC_URL}/textures/environmentMaps/0/nz.jpg`,
     ]);
 
     // Sizes
