@@ -29,6 +29,7 @@ import Physics from "../courses/advTech/physics";
 import ImportedModels from "../courses/advTech/imported-models";
 import RaycasterAndMouseEvents from "../courses/advTech/raycaster-and-mouse-events";
 import RealisticRender from "../courses/advTech/realistic-render";
+import CodeStructuringForBiggerProjects from "../courses/advTech/code-structuring-for-bigger-projects";
 // import AppDemo from "../demo/AppDemo";
 // import BloomDemo from "../demo/bloomDemo";
 // import MineDemo from "../demo/mineDemo";
@@ -155,6 +156,11 @@ export const items: MenuItem[] = [
       {
         key: "realistic-render",
         label: "Realistic render",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "code-structuring-for-bigger-projects",
+        label: "Code Structuring for Bigger Projects",
         icon: <AppstoreOutlined />,
       },
     ],
@@ -396,6 +402,10 @@ const router = createBrowserRouter([
       {
         path: "realistic-render",
         element: <RealisticRender />,
+      },
+      {
+        path: "code-structuring-for-bigger-projects",
+        element: <CodeStructuringForBiggerProjects />,
       },
       // {
       //   path: "app-demo",

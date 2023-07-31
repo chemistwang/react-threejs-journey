@@ -113,3 +113,14 @@ Each item contains useful information
 - Marmoset Toolbag
 - Substance Painter
 - etc.
+
+## 5. Code Structuring for Bigger projects
+
+### 5.1 No ideal for bigger projects
+
+- Hard to find what you want
+- Hard to re-use specific parts
+- Conflict with other variables
+- Conflicts with other developers
+- Cramps in your fingers because you have to scroll
+- Etc.
