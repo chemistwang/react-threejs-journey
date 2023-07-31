@@ -30,6 +30,11 @@ import ImportedModels from "../courses/advTech/imported-models";
 import RaycasterAndMouseEvents from "../courses/advTech/raycaster-and-mouse-events";
 import RealisticRender from "../courses/advTech/realistic-render";
 import CodeStructuringForBiggerProjects from "../courses/advTech/code-structuring-for-bigger-projects";
+import Shaders from "../courses/shaders/shaders";
+import ShaderPatterns from "../courses/shaders/shader-patterns";
+import RagingSea from "../courses/shaders/raging-sea";
+import AnimatedGalaxy from "../courses/shaders/animated-galaxy";
+import ModifiedMaterials from "../courses/shaders/modified-materials";
 // import AppDemo from "../demo/AppDemo";
 // import BloomDemo from "../demo/bloomDemo";
 // import MineDemo from "../demo/mineDemo";
@@ -165,38 +170,38 @@ export const items: MenuItem[] = [
       },
     ],
   },
-  // {
-  //   key: "4",
-  //   label: "Shaders",
-  //   icon: <AppstoreOutlined />,
-  //   children: [
-  //     {
-  //       key: "lights",
-  //       label: "Lights",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "transform-objects",
-  //       label: "Transform objects",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "animations",
-  //       label: "Animations",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "cameras",
-  //       label: "Cameras",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "fullscreen-resizing",
-  //       label: "Fullscreen and resizing",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //   ],
-  // },
+  {
+    key: "4",
+    label: "Shaders",
+    icon: <AppstoreOutlined />,
+    children: [
+      {
+        key: "shaders",
+        label: "Shaders",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "shader-patterns",
+        label: "Shader Patterns",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "raging-sea",
+        label: "Raging Sea",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "animated-galaxy",
+        label: "Animated Galaxy",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "modified-materials",
+        label: "Modified Materials",
+        icon: <AppstoreOutlined />,
+      },
+    ],
+  },
   // {
   //   key: "5",
   //   label: "Extra",
@@ -406,6 +411,26 @@ const router = createBrowserRouter([
       {
         path: "code-structuring-for-bigger-projects",
         element: <CodeStructuringForBiggerProjects />,
+      },
+      {
+        path: "shaders",
+        element: <Shaders />,
+      },
+      {
+        path: "shader-patterns",
+        element: <ShaderPatterns />,
+      },
+      {
+        path: "raging-sea",
+        element: <RagingSea />,
+      },
+      {
+        path: "animated-galaxy",
+        element: <AnimatedGalaxy />,
+      },
+      {
+        path: "modified-materials",
+        element: <ModifiedMaterials />,
       },
       // {
       //   path: "app-demo",

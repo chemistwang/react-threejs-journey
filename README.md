@@ -124,3 +124,33 @@ Each item contains useful information
 - Conflicts with other developers
 - Cramps in your fingers because you have to scroll
 - Etc.
+
+## 6. Shaders
+
+### 6.1 What is a shader
+
+- Program written in GLSL
+- Sent to the GPU
+- Position each vertex of a geometry
+- Colorize each visible pixel of that geometry
+
+We send a lot of data to the shader
+
+- Vertices coordinates
+- Mesh transformation
+- Information about the camera
+- Colors
+- Textures
+- Lights
+- Fog
+- Etc.
+
+### 6.2 vertex shader
+
+### 6.3 uniforms
+
+Useful for
+
+- Having the same shader but with different results
+- Being able to tweak values
+- Animating the value
