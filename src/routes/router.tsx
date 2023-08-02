@@ -35,6 +35,7 @@ import ShaderPatterns from "../courses/shaders/shader-patterns";
 import RagingSea from "../courses/shaders/raging-sea";
 import AnimatedGalaxy from "../courses/shaders/animated-galaxy";
 import ModifiedMaterials from "../courses/shaders/modified-materials";
+import PerformanceTips from "../courses/extra/performance-tips";
 // import AppDemo from "../demo/AppDemo";
 // import BloomDemo from "../demo/bloomDemo";
 // import MineDemo from "../demo/mineDemo";
@@ -202,102 +203,127 @@ export const items: MenuItem[] = [
       },
     ],
   },
-  // {
-  //   key: "5",
-  //   label: "Extra",
-  //   icon: <AppstoreOutlined />,
-  //   children: [
-  //     {
-  //       key: "lights",
-  //       label: "Lights",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "transform-objects",
-  //       label: "Transform objects",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "animations",
-  //       label: "Animations",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "cameras",
-  //       label: "Cameras",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "fullscreen-resizing",
-  //       label: "Fullscreen and resizing",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //   ],
-  // },
-  // {
-  //   key: "6",
-  //   label: "Portal Scene",
-  //   icon: <AppstoreOutlined />,
-  //   children: [
-  //     {
-  //       key: "lights",
-  //       label: "Lights",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "transform-objects",
-  //       label: "Transform objects",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "animations",
-  //       label: "Animations",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "cameras",
-  //       label: "Cameras",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "fullscreen-resizing",
-  //       label: "Fullscreen and resizing",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //   ],
-  // },
-  // {
-  //   key: "7",
-  //   label: "React Three Fiber",
-  //   icon: <AppstoreOutlined />,
-  //   children: [
-  //     {
-  //       key: "lights",
-  //       label: "Lights",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "transform-objects",
-  //       label: "Transform objects",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "animations",
-  //       label: "Animations",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "cameras",
-  //       label: "Cameras",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //     {
-  //       key: "fullscreen-resizing",
-  //       label: "Fullscreen and resizing",
-  //       icon: <AppstoreOutlined />,
-  //     },
-  //   ],
-  // },
+  {
+    key: "5",
+    label: "Extra",
+    icon: <AppstoreOutlined />,
+    children: [
+      {
+        key: "post-processing",
+        label: "Post processing",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "performance-tips",
+        label: "Performance tips",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "intro-and-loading-progress",
+        label: "Intro and loading progress",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "mixing-html-and-webgl",
+        label: "Mixing HTML and WebGL",
+        icon: <AppstoreOutlined />,
+      },
+    ],
+  },
+  {
+    key: "6",
+    label: "Portal Scene",
+    icon: <AppstoreOutlined />,
+    children: [
+      {
+        key: "creating-a-scene-in-blender",
+        label: "Creating a scene in Blender",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "baking-and-exporting-the-scene",
+        label: "Baking and exporting the scene",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "importing-and-optimizing-the-scene",
+        label: "Importing and optimizing the scene",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "adding-details-to-the-scene",
+        label: "Adding details to the scene",
+        icon: <AppstoreOutlined />,
+      },
+    ],
+  },
+  {
+    key: "7",
+    label: "React Three Fiber",
+    icon: <AppstoreOutlined />,
+    children: [
+      {
+        key: "first-r3f-application",
+        label: "First R3F Application",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "drei",
+        label: "Drei",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "debug",
+        label: "Debug",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "environment-and-staging",
+        label: "Environment and Staging",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "load-models",
+        label: "Load models",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "3d-text",
+        label: "3D Text",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "portal-scene",
+        label: "Portal Scene",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "mouse-events",
+        label: "Mouse Events",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "post-processing",
+        label: "Post processing",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "fun-and-simple-portfolio",
+        label: "Fun and Simple Portfolio",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "physics",
+        label: "Physics",
+        icon: <AppstoreOutlined />,
+      },
+      {
+        key: "create-a-game",
+        label: "Create a game",
+        icon: <AppstoreOutlined />,
+      },
+    ],
+  },
   {
     key: "999",
     label: "Demo",
@@ -431,6 +457,10 @@ const router = createBrowserRouter([
       {
         path: "modified-materials",
         element: <ModifiedMaterials />,
+      },
+      {
+        path: "performance-tips",
+        element: <PerformanceTips />,
       },
       // {
       //   path: "app-demo",
